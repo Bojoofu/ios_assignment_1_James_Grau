@@ -18,11 +18,6 @@ class AboutController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
-
-        let imagePath = UIBezierPath(rect: imgLinkedIn.frame)
-        txtAbout.textContainer.exclusionPaths = [imagePath]
     }
     
 

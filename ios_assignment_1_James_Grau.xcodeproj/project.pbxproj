@@ -22,6 +22,7 @@
 		AE6CF8482200DE4D006877F3 /* home_backgruond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE6CF8462200DE4D006877F3 /* home_backgruond.jpg */; };
 		AE6CF84A2200DEE8006877F3 /* linked_in.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AE6CF8492200DEE8006877F3 /* linked_in.jpeg */; };
 		AE6CF84C2200DFEF006877F3 /* about_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE6CF84B2200DFEE006877F3 /* about_background.jpg */; };
+		AE6CF8532200F162006877F3 /* launchscreen_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE6CF8522200F162006877F3 /* launchscreen_background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		AE6CF8492200DEE8006877F3 /* linked_in.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = linked_in.jpeg; sourceTree = "<group>"; };
 		AE6CF84B2200DFEE006877F3 /* about_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about_background.jpg; sourceTree = "<group>"; };
 		AE6CF8512200ED2A006877F3 /* input_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = input_background.jpg; path = "/Users/xcode/Documents/Assignments/Assignment 1/ios_assignment_1_James_Grau/ios_assignment_1_James_Grau/Images/input_background.jpg"; sourceTree = "<absolute>"; };
+		AE6CF8522200F162006877F3 /* launchscreen_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchscreen_background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		AE6CF8372200C1EA006877F3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE6CF8522200F162006877F3 /* launchscreen_background.jpg */,
 				AE6CF8512200ED2A006877F3 /* input_background.jpg */,
 				AE6CF84B2200DFEE006877F3 /* about_background.jpg */,
 				AE6CF8492200DEE8006877F3 /* linked_in.jpeg */,
@@ -300,6 +303,7 @@
 				AE17C93021FE731900F46503 /* Assets.xcassets in Resources */,
 				AE17C92E21FE731700F46503 /* Main.storyboard in Resources */,
 				AE6CF84A2200DEE8006877F3 /* linked_in.jpeg in Resources */,
+				AE6CF8532200F162006877F3 /* launchscreen_background.jpg in Resources */,
 				AE6CF84C2200DFEF006877F3 /* about_background.jpg in Resources */,
 				AE6CF8392200C20B006877F3 /* contact-header.jpg in Resources */,
 				AE6CF8482200DE4D006877F3 /* home_backgruond.jpg in Resources */,
