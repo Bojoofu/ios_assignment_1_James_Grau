@@ -9,11 +9,20 @@
 import UIKit
 
 class AboutController: UIViewController {
+    
+    // Create the needed object links
+    @IBOutlet var imgLinkedIn : UIImageView!
+    @IBOutlet var txtAbout : UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+
+        let imagePath = UIBezierPath(rect: imgLinkedIn.frame)
+        txtAbout.textContainer.exclusionPaths = [imagePath]
     }
     
 
