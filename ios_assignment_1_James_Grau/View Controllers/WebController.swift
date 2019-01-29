@@ -9,10 +9,11 @@
 import UIKit
 import WebKit
 
-class WebController: UIViewController {
+class WebController: UIViewController, WKNavigationDelegate {
     
     // Create the needed objects
     @IBOutlet var webPage : WKWebView!
+    @IBOutlet var activity : UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,17 @@ class WebController: UIViewController {
         let urlAddress = URL(string: "https://www.linkedin.com/in/jamesgrau")
         let url = URLRequest(url : urlAddress!)
         webPage.load(url)
+        webPage.navigationDelegate = self
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        activity.isHidden = false
+        activity.startAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activity.isHidden = true
+        activity.stopAnimating()
     }
     
 
