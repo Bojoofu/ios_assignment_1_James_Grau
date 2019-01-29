@@ -63,6 +63,7 @@
 		AE6CF8462200DE4D006877F3 /* home_backgruond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_backgruond.jpg; sourceTree = "<group>"; };
 		AE6CF8492200DEE8006877F3 /* linked_in.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = linked_in.jpeg; sourceTree = "<group>"; };
 		AE6CF84B2200DFEE006877F3 /* about_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = about_background.jpg; sourceTree = "<group>"; };
+		AE6CF8512200ED2A006877F3 /* input_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = input_background.jpg; path = "/Users/xcode/Documents/Assignments/Assignment 1/ios_assignment_1_James_Grau/ios_assignment_1_James_Grau/Images/input_background.jpg"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +174,7 @@
 		AE6CF8372200C1EA006877F3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE6CF8512200ED2A006877F3 /* input_background.jpg */,
 				AE6CF84B2200DFEE006877F3 /* about_background.jpg */,
 				AE6CF8492200DEE8006877F3 /* linked_in.jpeg */,
 				AE6CF8462200DE4D006877F3 /* home_backgruond.jpg */,

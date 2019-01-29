@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ios_assignment_1_James_Grau.xcodeproj">
+      location = "group:/Users/xcode/Documents/Assignments/Assignment 1/ios_assignment_1_James_Grau/ios_assignment_1_James_Grau/Images/input_background.jpg">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
