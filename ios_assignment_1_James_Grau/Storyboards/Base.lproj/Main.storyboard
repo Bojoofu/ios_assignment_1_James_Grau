@@ -297,6 +297,9 @@
                                     <navigationItem title="Linked In | Web Page" id="IV5-p2-9bp">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="3k4-ZH-XhQ">
                                             <color key="tintColor" red="0.0" green="0.61568627450000002" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="uC2-Uc-v9V" kind="unwind" unwindAction="unwindToHomeVCWithSender:" id="gWD-Og-Mfa"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -319,6 +322,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0K-Qa-o4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uC2-Uc-v9V" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1444" y="796.55172413793105"/>
         </scene>
