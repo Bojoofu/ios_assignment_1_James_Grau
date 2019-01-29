@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputController: UIViewController {
+class InputController: UIViewController, UITextFieldDelegate {
     
     // Initialize the items on the form
     @IBOutlet var lblAge : UILabel!
@@ -88,5 +88,27 @@ class InputController: UIViewController {
                 lblGender.text = "Female"
             break
         }
+    }
+    
+    // This action is used to display a thank you message to the user thanking for their time
+    @IBAction func submitInfo(sender : UIButton) {
+        // Create the needed variables
+        let name = txtName.text
+        let email = txtEmailAddress.text
+        let message = "Thank you " + name! + " of " + email! + " for your time!"
+        let alert = UIAlertController(title : "Thank you for your Time!", message : message, preferredStyle: .alert)
+        let noProblem = UIAlertAction(title: "No Problem!", style: .default, handler: nil)
+        
+        // Add the action button the the alert
+        alert.addAction(noProblem)
+        
+        // Present the alert message to the user.
+        present(alert, animated: true)
+    }
+    
+    // This function is used to close the keyboard after the user is done with it
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Return that the user should be done with the keyboard
+        return textField.resignFirstResponder()
     }
 }
