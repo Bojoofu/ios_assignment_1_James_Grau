@@ -91,12 +91,33 @@ class InputController: UIViewController, UITextFieldDelegate {
         // Create the needed variables
         let name = txtName.text
         let email = txtEmailAddress.text
-        let message = "Thank you " + name! + " of " + email! + " for your time!"
-        let alert = UIAlertController(title : "Thank you for your Time!", message : message, preferredStyle: .alert)
-        let noProblem = UIAlertAction(title: "No Problem!", style: .default, handler: nil)
+        var alertTitle = "Oops... Theres an Issue."
+        var alertMessage = ""
+        var alertButtonTitle = "I'll Try Again"
+        
+        // Check to make sure the user enterd the name and email adderss
+        if((name?.count)! > 0 && (email?.count)! > 0) {
+            // Check to make sure the email is a valid email address
+            if((email?.isValidEmail())!) {
+                // Set the alert items
+                alertTitle = "Thank you for your Time!"
+                alertMessage = "Thank you " + name! + " of " + email! + " for your time!"
+                alertButtonTitle = "No Problem!"
+            }else{
+                // Set the alert message
+                alertMessage = "Looks like that is not a valid email address.  Please correct it and try again."
+            }
+        }else{
+            // Set the alert message
+            alertMessage = "Looks like you haven't entered your name and/or email address.  Those items are required and need to be entered before submitting."
+        }
+        
+        // Initialize the alert
+        let alert = UIAlertController(title : alertTitle, message : alertMessage, preferredStyle: .alert)
+        let alertButton = UIAlertAction(title: alertButtonTitle, style: .default, handler: nil)
         
         // Add the action button the the alert
-        alert.addAction(noProblem)
+        alert.addAction(alertButton)
         
         // Present the alert message to the user.
         present(alert, animated: true)
@@ -106,5 +127,18 @@ class InputController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Return that the user should be done with the keyboard
         return textField.resignFirstResponder()
+    }
+}
+
+// Add an extension to the string class that allows for a string to be checked if it is a valid email address or not
+// Adapted from https://stackoverflow.com/a/26503188
+extension String {
+    // Create the function that will take the string and evaluate if it is a proper email address and return the Boolean result
+    func isValidEmail() -> Bool {
+        // Create the regular expression that matches a proper email address
+        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        
+        // Run the regular expression against the string and return the Boolean result
+        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
     }
 }
