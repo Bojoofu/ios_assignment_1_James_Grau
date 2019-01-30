@@ -1,24 +1,27 @@
-//
-//  WebController.swift
-//  ios_assignment_1_James_Grau
-//
-//  Created by Xcode User on 2019-01-29.
-//  Copyright © 2019 James Grau. All rights reserved.
-//
+/**
+ *
+ * Student Name: James Grau
+ * Student ID: 991443203
+ * Due Date : February 3, 2019 @ 11:59 PM
+ * Description: Assignment 1
+ *
+**/
 
+// Import the needed packages
 import UIKit
 import WebKit
 
+// This class is used to control the Web page operations
 class WebController: UIViewController, WKNavigationDelegate {
-    
     // Create the needed objects
     @IBOutlet var webPage : WKWebView!
     @IBOutlet var activity : UIActivityIndicatorView!
 
+    // This is the main method used to perform operations after the page has loaded
     override func viewDidLoad() {
+        // Call the super class and perform the needed operations
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         // Set and initialize the web view to my linked in Profile
         let urlAddress = URL(string: "https://www.linkedin.com/in/jamesgrau")
         let url = URLRequest(url : urlAddress!)
@@ -26,25 +29,17 @@ class WebController: UIViewController, WKNavigationDelegate {
         webPage.navigationDelegate = self
     }
     
+    // This function is used start the activity spinner animation once the page is loading
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        // Display the activity spinner and start its animation
         activity.isHidden = false
         activity.startAnimating()
     }
     
+    // This function is used to hide and stop animation the activity spinner once the web page has loaded
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // Hide the activity spinner and stops its animation
         activity.isHidden = true
         activity.stopAnimating()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

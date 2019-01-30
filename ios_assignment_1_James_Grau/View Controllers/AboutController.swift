@@ -1,34 +1,24 @@
-//
-//  AboutController.swift
-//  ios_assignment_1_James_Grau
-//
-//  Created by Xcode User on 2019-01-28.
-//  Copyright © 2019 James Grau. All rights reserved.
-//
-
+/**
+ *
+ * Student Name: James Grau
+ * Student ID: 991443203
+ * Due Date : February 3, 2019 @ 11:59 PM
+ * Description: Assignment 1
+ *
+**/
+ 
+// Import the needed packages
 import UIKit
 
+// This class is used to habdle the operations for the about page
 class AboutController: UIViewController {
-    
     // Create the needed object links
     @IBOutlet var imgLinkedIn : UIImageView!
     @IBOutlet var txtAbout : UITextView!
 
+    // This method is used to perform any needed operation after the page has loaded
     override func viewDidLoad() {
+        // Call the super class and perform any needed operations
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

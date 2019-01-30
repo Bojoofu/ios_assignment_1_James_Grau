@@ -1,15 +1,17 @@
-//
-//  InputController.swift
-//  ios_assignment_1_James_Grau
-//
-//  Created by Xcode User on 2019-01-28.
-//  Copyright © 2019 James Grau. All rights reserved.
-//
+/**
+ *
+ * Student Name: James Grau
+ * Student ID: 991443203
+ * Due Date : February 3, 2019 @ 11:59 PM
+ * Description: Assignment 1
+ *
+**/
 
+// Import the needed packages
 import UIKit
 
+// This class is used to control the input view page
 class InputController: UIViewController, UITextFieldDelegate {
-    
     // Initialize the items on the form
     @IBOutlet var lblAge : UILabel!
     @IBOutlet var lblGender : UILabel!
@@ -23,9 +25,8 @@ class InputController: UIViewController, UITextFieldDelegate {
 
     // This function is used to perform the setup of the page
     override func viewDidLoad() {
+        // Call the super class and perform the needed operations
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         // Always keep the max date for the birthday date picker to the date of the app run time and the minumum to the current date - 100 years
         dtpBirthday.maximumDate = Date()
@@ -35,6 +36,7 @@ class InputController: UIViewController, UITextFieldDelegate {
         updateBirthdayYearDate()
     }
     
+    // This fucntion is used to update the date picker year based off of the slider age Math: ([CurrentYear] - [SliderValue - 'AGE'])
     func updateBirthdayYearDate() {
         // Set the birthday date picker to the adjusted date
         let age = Int(sldAge.value) // Grad the current users age as an int
@@ -79,12 +81,6 @@ class InputController: UIViewController, UITextFieldDelegate {
             // Perform the case for when the switch is off
             case false:
                 // Set the gender label to display for Female
-                lblGender.text = "Female"
-            break
-            
-            // Perform the default case for the gender switch
-            default:
-                // Set the gender label to dissplay for female
                 lblGender.text = "Female"
             break
         }
